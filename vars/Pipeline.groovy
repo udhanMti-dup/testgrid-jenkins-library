@@ -200,7 +200,7 @@ def call() {
                     script {
                         try {
                             tgExecutor.finalizeTestPlans(props.PRODUCT, props.WORKSPACE)
-                            tgExecutor.generateEmail(props.PRODUCT, props.WORKSPACE)
+                            //tgExecutor.generateEmail(props.PRODUCT, props.WORKSPACE)
                             //awsHelper.uploadCharts()
                             def properties = readProperties file: "${props.CONFIG_PROPERTY_FILE_PATH}"
                             def testgrid_environment = properties['TESTGRID_ENVIRONMENT']
