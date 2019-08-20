@@ -25,10 +25,10 @@ class Properties {
 
     final static def env = System.getenv()
 
-    final static def TESTGRID_HOME
-    static{
-            TESTGRID_HOME= env['TESTGRID_HOME']
-    }
+    final static def TESTGRID_HOME= env['TESTGRID_HOME']
+//    static{
+//            TESTGRID_HOME= env['TESTGRID_HOME']
+//    }
     final static def TESTGRID_NAME                = "WSO2-TestGrid"
     //final static def TESTGRID_HOME                = env['TESTGRID_HOME']
     final static def TESTGRID_DIST_LOCATION       = TESTGRID_HOME + "/testgrid-dist"
