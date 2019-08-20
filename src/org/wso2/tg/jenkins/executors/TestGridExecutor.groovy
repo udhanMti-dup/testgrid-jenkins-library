@@ -33,7 +33,7 @@ def generateTesPlans(def product, def configYaml) {
     def props = Properties.instance
     sh """
         cd ${props.TESTGRID_DIST_LOCATION}/${props.TESTGRID_NAME}
-        echo "$TESTGRID_HOME"
+        
         ./testgrid generate-test-plan \
             --product ${product} \
             --file ${configYaml}
