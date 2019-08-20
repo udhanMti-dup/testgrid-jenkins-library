@@ -23,9 +23,9 @@ import org.wso2.tg.jenkins.util.Common
 class Properties {
 
 
-    final static def env = System.getenv()
+//    final static def env = System.getenv()
 
-    final static def TESTGRID_HOME= env['TESTGRID_HOME']
+    final static def TESTGRID_HOME=  System.getenv('TESTGRID_HOME')
 //    static{
 //            TESTGRID_HOME= env['TESTGRID_HOME']
 //    }
