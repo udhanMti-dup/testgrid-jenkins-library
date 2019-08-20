@@ -27,7 +27,7 @@ class Properties {
 
     final static def TESTGRID_HOME;
     static{
-        if(System.getenv("TESTGRID_HOME") is null){
+        if(System.getenv("TESTGRID_HOME") == ""){
             TESTGRID_HOME="/testgrid/testgrid-home"
         }else{
             TESTGRID_HOME=System.getenv("TESTGRID_HOME")
