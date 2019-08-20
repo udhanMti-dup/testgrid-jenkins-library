@@ -22,10 +22,19 @@ import org.wso2.tg.jenkins.util.Common
 @Singleton
 class Properties {
 
-    static def env = System.getenv();
 
+   // static def env = System.getenv();
+
+    final static def TESTGRID_HOME;
+    static{
+        if(System.getenv("TESTGRID_HOME") is null){
+            TESTGRID_HOME="/testgrid/testgrid-home"
+        }else{
+            TESTGRID_HOME=System.getenv("TESTGRID_HOME")
+        }
+    }
     final static def TESTGRID_NAME                = "WSO2-TestGrid"
-    final static def TESTGRID_HOME                = env['TESTGRID_HOME']
+    //final static def TESTGRID_HOME                = "/testgrid/testgrid-home"
     final static def TESTGRID_DIST_LOCATION       = TESTGRID_HOME + "/testgrid-dist"
     final static def JOB_CONFIG_YAML              = "job-config.yaml"
     final static def SQL_DRIVERS_LOCATION_UNIX    ="/opt/testgrid/sql-drivers/"
