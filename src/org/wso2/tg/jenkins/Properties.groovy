@@ -26,18 +26,23 @@ class Properties {
 //    final static def env = System.getenv()
 
     final static def TESTGRID_HOME
+    final static def TESTGRID_DIST_LOCATION
+    final static def CONFIG_PROPERTY_FILE_PATH
     static{
             TESTGRID_HOME=  System.getenv('TESTGRID_HOME')
+            TESTGRID_DIST_LOCATION       = TESTGRID_HOME + "/testgrid-dist"
+            CONFIG_PROPERTY_FILE_PATH    = TESTGRID_HOME + "/config.properties"
     }
+
     final static def TESTGRID_NAME                = "WSO2-TestGrid"
     //final static def TESTGRID_HOME                = env['TESTGRID_HOME']
-    final static def TESTGRID_DIST_LOCATION       = TESTGRID_HOME + "/testgrid-dist"
+   // final static def TESTGRID_DIST_LOCATION       = TESTGRID_HOME + "/testgrid-dist"
     final static def JOB_CONFIG_YAML              = "job-config.yaml"
     final static def SQL_DRIVERS_LOCATION_UNIX    ="/opt/testgrid/sql-drivers/"
     final static def SQL_DRIVERS_LOCATION_WINDOWS ="/testgrid/sql-drivers"
     final static def REMOTE_WORKSPACE_DIR_UNIX    ="/opt/testgrid/workspace"
     final static def REMOTE_WORKSPACE_DIR_WINDOWS ="c:/testgrid/workspace"
-    final static def CONFIG_PROPERTY_FILE_PATH    = TESTGRID_HOME + "/config.properties"
+   // final static def CONFIG_PROPERTY_FILE_PATH    = TESTGRID_HOME + "/config.properties"
     final static def DEFAULT_EXECUTOR_COUNT       = 12
     final static def SSH_KEY_FILE_PATH            = "workspace/testgrid-key.pem"
     final static def SSH_KEY_FILE_PATH_INTG       = "testgrid-key.pem"
