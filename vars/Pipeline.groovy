@@ -57,7 +57,7 @@ def call() {
         }
         // These variables are needed by the shell scripts when setting up and running tests
         environment {
-            TESTGRID_HOME = "$TESTGRID_HOME"
+            TESTGRID_HOME = "${props.TESTGRID_HOME}"
             WUM_UAT_URL = common.getJenkinsCredentials('WUM_UAT_URL')
             WUM_UAT_APPKEY = common.getJenkinsCredentials('WUM_UAT_APPKEY')
             USER_NAME = common.getJenkinsCredentials('WUM_USERNAME')
