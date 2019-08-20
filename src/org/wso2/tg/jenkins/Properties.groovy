@@ -27,11 +27,7 @@ class Properties {
 
     final static def TESTGRID_HOME;
     static{
-        if(env['TESTGRID_HOME'] == ""){
-            TESTGRID_HOME= "/testgrid/testgrid-home"
-        }else{
             TESTGRID_HOME= env['TESTGRID_HOME']
-        }
     }
     final static def TESTGRID_NAME                = "WSO2-TestGrid"
     //final static def TESTGRID_HOME                = env['TESTGRID_HOME']
