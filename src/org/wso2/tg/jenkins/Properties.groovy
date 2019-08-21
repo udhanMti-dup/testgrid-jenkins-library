@@ -29,9 +29,13 @@ class Properties {
     final static def TESTGRID_DIST_LOCATION
     final static def CONFIG_PROPERTY_FILE_PATH
     static{
-            TESTGRID_HOME=  System.getenv('TESTGRID_HOME')
-            TESTGRID_DIST_LOCATION       = TESTGRID_HOME + "/testgrid-dist"
-            CONFIG_PROPERTY_FILE_PATH    = TESTGRID_HOME + "/config.properties"
+        if(System.getenv('TESTGRID_HOME') == null){
+            TESTGRID_HOME= "/testgrid/testgrid-home"
+        }else {
+            TESTGRID_HOME = System.getenv('TESTGRID_HOME')
+        }
+        TESTGRID_DIST_LOCATION = TESTGRID_HOME + "/testgrid-dist"
+        CONFIG_PROPERTY_FILE_PATH = TESTGRID_HOME + "/config.properties"
     }
 
     final static def TESTGRID_NAME                = "WSO2-TestGrid"
